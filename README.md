@@ -1,4 +1,4 @@
-# alpine-node-yarn-install-gcloud-kubectl
+# alpine-gcloud-kubectl
 Lightweight kubectl docker image on alpine with gcloud
 
 ## gcloud
@@ -18,3 +18,9 @@ set envs:
 1. GCP_ACCOUNT=example@example-project.iam.gserviceaccount.com
 2. GCP_KEY_FILE=example_gcp_key.json
 3. GCP_PROJECT=example_project_id
+
+then
+
+```sh
+gcloud auth activate-service-account ${GCP_ACCOUNT} --key-file=${GCP_KEY_PATH} --project ${GCP_PROJECT}
+```
